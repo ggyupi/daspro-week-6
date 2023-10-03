@@ -18,11 +18,11 @@ public class Pemilihan2Percobaan205 {
         if (totalSudut == 180) {
             if ((sdtSegitiga1 == 90) || (sdtSegitiga2 == 90) || (sdtSegitiga3 == 90)) {
                 System.out.println("Segitiga tersebut adalah segitiga siku-siku");
-            } else if ((sdtSegitiga1 == 60) && (sdtSegitiga2 == 60) && (sdtSegitiga3 == 60)) {
+            } else if ((sdtSegitiga1 == sdtSegitiga2) && (sdtSegitiga1 == sdtSegitiga3)) {
                 System.out.println("Segitiga tersebut adalah segitiga sama sisi");
-            } else if ((sdtSegitiga1 < 179) || (sdtSegitiga2 < 179) && (sdtSegitiga3 < 179)) {
+            } else if ((sdtSegitiga1 == sdtSegitiga2) || (sdtSegitiga2 == sdtSegitiga3) || (sdtSegitiga1 == sdtSegitiga3)) {
                 System.out.println("Segitiga tersebut adalah segitiga sama kaki");
-            } else if ((sdtSegitiga1 < 179) || (sdtSegitiga2 < 179) || (sdtSegitiga3 < 179)) {
+            } else {
                 System.out.println("Segitiga tersebut adalah segitiga sembarang");
             }
         } else
