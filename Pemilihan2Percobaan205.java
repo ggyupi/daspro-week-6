@@ -16,10 +16,15 @@ public class Pemilihan2Percobaan205 {
         int sdtSegitiga3 = input05.nextInt();
         totalSudut = sdtSegitiga1 + sdtSegitiga2 + sdtSegitiga3;
         if (totalSudut == 180) {
-            if ((sdtSegitiga1 == 90) || (sdtSegitiga2 == 90) || (sdtSegitiga3 == 90))
+            if ((sdtSegitiga1 == 90) || (sdtSegitiga2 == 90) || (sdtSegitiga3 == 90)) {
                 System.out.println("Segitiga tersebut adalah segitiga siku-siku");
-            else
-                System.out.println("Segitiga tersebut adalah bukan segitiga siku-siku");
+            } else if ((sdtSegitiga1 == 60) && (sdtSegitiga2 == 60) && (sdtSegitiga3 == 60)) {
+                System.out.println("Segitiga tersebut adalah segitiga sama sisi");
+            } else if ((sdtSegitiga1 < 179) || (sdtSegitiga2 < 179) && (sdtSegitiga3 < 179)) {
+                System.out.println("Segitiga tersebut adalah segitiga sama kaki");
+            } else if ((sdtSegitiga1 < 179) || (sdtSegitiga2 < 179) || (sdtSegitiga3 < 179)) {
+                System.out.println("Segitiga tersebut adalah segitiga sembarang");
+            }
         } else
             System.out.println("Bukan segitiga");
         input05.close();
